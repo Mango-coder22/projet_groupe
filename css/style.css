@@ -1,0 +1,683 @@
+
+*,::before,::after {
+  box-sizing: border-box!important;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  text-decoration: none;
+  list-style: none;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #FAF5E5;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif!important;
+}
+.page {
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+}
+.logo{
+  height:200px;
+  width: 205.27px;
+  justify-content: start;
+}
+
+.logopiece{
+  width: 102.64px;
+  height: 80px;
+}
+
+.buttonpiece{
+  gap: 3em;
+  margin: 10px;
+}
+
+nav div ul li button a{
+  color: #00ffd5;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+  border: solid black;
+}
+
+.nav-links ul{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar .nav-links ul li{
+  margin: 0 25px;
+  align-items: flex-end;
+}
+
+.navbar .nav-links ul li a{
+  font-weight: 600;
+}
+
+.nav-links{
+  align-items: flex-end;
+  justify-content: center;
+} 
+
+.wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+#reload {
+  width: 300px;
+  height: 300px;
+}
+
+
+/**********************************buuton effects ******************************/
+
+.button_header{
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-family: 'Modak', cursive;
+}
+
+
+.button_header:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.button_header:active {
+  color: #000;
+}
+
+.button_header:active:after {
+  background: transparent;
+}
+
+.button_header:hover:before {
+  opacity: 1;
+}
+
+.button_header:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: whitesmoke;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes button_head{
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/*************************** buuton effects ********************************/
+
+
+
+/*****************************header**********************************/
+
+
+/************************main page catalogue *********************/
+
+
+#catalogue_ {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 50px;
+  font-size: 30px;
+}
+
+.anime_filtre {
+  height: 20vh;
+  width: 75%;
+  background: rgb(45, 34, 247);
+  background: linear-gradient(90deg, rgba(45, 34, 247, 1) 17%, rgba(39, 39, 59, 1) 100%, rgba(82, 110, 66, 1) 100%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  border: solid;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.div-all_anime_catalogue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 50vh;
+  width: 75%;
+  margin: auto;
+  border: solid;
+  margin-top: 40px;
+  background: rgb(45, 34, 247);
+  background: linear-gradient(90deg, rgba(45, 34, 247, 1) 17%, rgba(39, 39, 59, 1) 100%, rgba(82, 110, 66, 1) 100%);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.preview_anime {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+
+.preview_anime .car {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview_anime h2,
+.preview_anime p {
+  margin: 5px;
+}
+
+
+/***************************main page catalogue *************************/
+
+/***************************profil page***************************/
+
+#div_profil_hautpage{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#div_profil_hautpage img{
+  
+  width: 10em;
+  height: 10em;
+}
+
+.img_profil1{
+  order: 3;
+}
+
+.img_profil2{
+  order: 3;
+}
+
+#votre_profil_div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10em;
+  
+}
+
+#h1_profil_top{
+  padding: 0.5em;
+}
+
+.fa-solid {
+  order: -1;
+}
+
+#text_profil_top{
+  padding-left: 10em;                                                               
+}
+
+#aaa{
+  display: flex;
+  flex-direction: column;
+}
+
+.historique_div{
+  width: 75%;
+  height: 100px;
+  background: #333;
+}
+
+div ul li{
+  display: inline-block;
+}
+
+#div_historique_container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-left: 10em;
+}
+
+#div_historique_container ul li h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.watchlist_div{
+  width: 75%;
+  height: 100px;
+  background: #333;
+}
+
+div ul li{
+  display: inline-block;
+}
+
+#div_watchlist_container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10em;
+}
+
+#div_watchlist_container ul li h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.watchlist_div{
+  width: 75%;
+  height: 100px;
+  background: #333;
+}
+
+div ul li{
+  display: inline-block;
+}
+
+#div_watchlist_container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10em;
+  padding-top: 20px;
+  /* padding-bottom: 20px; */
+}
+
+#div_watchlist_container ul li h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#div_favoris_container{
+  display: flex;
+  flex-direction: column;
+  padding-left: 10em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#div_favoris_container ul li h2{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.favoris_div{
+  width: 75%;
+  height: 100px;
+  background: #333;
+  
+}
+/**************************profil page**************************/
+
+@media screen and (max-width: 956px){
+  nav div ul{
+      flex-direction: column;
+  }
+}
+/***************************main page catalogue *************************/
+@media only screen and (max-width: 768px) {
+  #catalogue_ {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .anime_filtre,
+  .div-all_anime_catalogue {
+      width: 90%;
+  }
+
+  .preview_anime {
+      flex-basis: 100%;
+  }
+}
+
+/***************************main page catalogue *************************/
+
+
+/*********************************************** PAGE D'ACCUEIL ANAELLE ***********************************************************************************************************************************************/
+
+
+.carrousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: gray;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center center; /* Centre l'image horizontalement et verticalement */
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease-in-out;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.un {
+  background-image: url('images/0b8254f4-a333-4fd5-a44f-321e64f2f965.webp');
+}
+
+.deux {
+  background-image: url('images/41248fbc-1b74-43d1-9387-70202edf4756.webp');
+}
+
+.trois {
+  background-image: url('images/4707b47a-40a3-4105-a273-67050dfb332b.webp');
+}
+
+.quatre {
+  background-image: url('images/6c5992d4-e122-40c1-8567-888804dde33c.webp');
+}
+
+.cinq {
+  background-image: url('images/6f6073d3-908f-4fab-b0f6-8499de34eb6c.webp');
+}
+/* titre */
+.new {
+  text-align: center;
+}
+
+/* ensemble de vidéos youtubes */
+.trailer {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+}
+
+/* résumés vidéos */
+.detailes{
+  color: #FAF5E5;
+  background-color: gray;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+/* Media Queries smartphone */
+@media  screen and (max-device-width :  600px) {
+  /* titre */
+  .new {
+    font-size: 16px;
+   }
+  /* ensemble de vidéos youtubes */
+  .trailer {
+    flex-wrap: wrap;
+    gap: 4px;
+    flex-direction: column;
+    align-items: center;
+  }
+  /* vidéos youtube */
+  .iyoutube {
+    width: 100%;
+    height: 100%;
+  }
+  /* résumés vidéos */
+  .detailes {
+    font-size: small;
+    padding: 3px;
+  }
+}
+/* Media Queries tablette */
+@media  screen and (max-device-width :  1600px) {
+  .carrousel {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    width: 100%;
+    scroll-snap-align: start;
+  }
+  /* titre */
+  .new {
+    font-size: 24px;
+   }
+  /* ensemble de vidéos youtubes */
+  .trailer {
+    gap: 6px;
+  }
+  /* vidéos youtube */
+  .iyoutube {
+    width: 100%;
+    height: 100%;
+  }
+  /* résumés vidéos */
+  .detailes {
+    font-size: medium;
+    padding: 3px;
+  }
+}
+
+/*********************************************** FIN PAGE D'ACCUEIL ANAELLE ***********************************************************************************************************************************************/
+
+
+
+/*********************************************** PAGE D'INSCRIPTION ANAELLE ***********************************************************************************************************************************************/
+
+
+
+/* page entière */
+.contenue_inscription {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* fond du formulaire */
+.inscription-formulaire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px;
+}
+
+/* intérieure du formulaire */
+.inscription-interieur {
+  background-color: #FAF5E5;
+  padding: 10px;
+}
+
+/* textes du formulaire */
+.inscription-legende {
+  background-color: #FAF5E5;
+  text-align: center;
+  padding: 10px;
+}
+
+/* boutons du bas du formulaire */
+.inscription-boutton-lignes {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+}
+
+/* boutons */
+.inscription-boutton {
+  background-color: #B53333;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+/* Media Queries */
+@media  screen and (max-device-width :  1024px) {
+  /* fond du formulaire */
+  .inscription-formulaire {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* textes cotégories */
+  .inscription-td {
+    width: 100px;
+  }
+  /* espaces de saisie+ */
+  .saisie {
+    width: 200px;
+  }
+
+  /* boutons du bas du formulaire */
+  .inscription-boutton-lignes {
+    flex-direction: column;
+  }
+
+}
+
+
+/*********************************************** FIN PAGE D'INSCRIPTION ANAELLE ***********************************************************************************************************************************************/
+
+
+
+/*********************************************** PAGE D'ERREUR 404 ANAELLE ***********************************************************************************************************************************************/
+
+
+
+/* page entière */
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* text 404 */
+.title-error {
+  text-align: center;
+  font-size: 50px;
+  color: #B53333;
+}
+
+.retour{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media  screen and (max-device-width :  1024px) {
+  /* text 404 */
+.title-error {
+  font-size: 25px;
+}
+}
+/*********************************************** FIN PAGE D'ERREUR 404 ANAELLE ***********************************************************************************************************************************************/
+
+
+
+.co {
+  width: 15rem!important;
+  padding: 10px 10px!important;
+}
+
+.ro {
+  overflow-x: scroll;
+  display: flex;
+  margin: 0 -5px!important;
+}
+
+.ro:after {
+  content: ""!important;
+  display: table!important;
+  clear: both!important;
+}
+
+@media screen and (max-width: 1000px) {
+  .co {
+    width: 50%!important;
+    display: block!important;
+    margin-bottom: 20px!important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .co {
+    width: 100%!important;
+    display: block!important;
+    margin-bottom: 20px!important;
+  }
+  
+  #mar,
+  #mec,
+  #jeu,
+  #ven,
+  #sam,
+  #dim {
+    visibility: collapse!important;
+    height: 0!important;
+    display: none!important;
+  }
+}
+
+.car {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)!important;
+  border-radius: 5%!important;
+  padding: 12px!important;
+  text-align: center!important;
+  background-color: #1e1e1e!important;
+  transition: 0.3s!important;
+  color: #f1f1f1!important;
+}
+
+.car:hover {
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.4)!important;
+  transform
+
+: translateY(-10px)!important;
+  transform: translateX(20px)!important;
+}
+
+img {
+  border-radius: 10px!important;
+}
+
+footer,
+  #footer  {
+    background-color: rgba(0, 0, 0, 0.5)!important;
+  }
